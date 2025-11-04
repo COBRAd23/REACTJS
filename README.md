@@ -2,33 +2,6 @@
 
 Este es el proyecto inicial de e-commerce, construido con React y estilizado usando Tailwind CSS para lograr un look and feel moderno y oscuro.
 
-## 📦 Instalación
-
-```bash
-npm install
-```
-
-## 🚀 Ejecutar en Desarrollo
-
-```bash
-npm run dev
-```
-
-## 🏗️ Construir para Producción
-
-```bash
-npm run build
-```
-
-## 📄 Desplegar en GitHub Pages
-
-**¡IMPORTANTE!** Para desplegar tu proyecto en GitHub Pages, sigue las instrucciones detalladas en [DEPLOY.md](./DEPLOY.md)
-
-**Resumen rápido:**
-1. Sube tu código a GitHub
-2. Ve a Settings → Pages → Source: GitHub Actions
-3. Haz push a `main` y se desplegará automáticamente
-
 ## 🎨 Estructura de Componentes
 
 - **NavBar**: Barra de navegación con logo, enlaces y CartWidget
@@ -53,4 +26,3 @@ npm run build
 - ✅ Ordenamiento de productos
 - ✅ Notificaciones de acciones
 - ✅ Diseño responsive
-- ✅ Optimizado para GitHub Pages
