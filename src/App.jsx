@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -21,7 +21,7 @@ const App = () => {
       type: 'success',
     });
     setTimeout(() => {
-      window.location.href = '/';
+      window.location.href = '#/';
     }, 3000);
   };
 
