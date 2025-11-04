@@ -1,7 +1,7 @@
 // Archivo de datos simulados para la aplicación.
 
 export const mockProducts = [
-  // Productos Destacados (Mostrados en la "Entrega 1" - 3 Productos)
+  // Productos Destacados (Mostrados en la sección destacados - 3 Productos)
   {
     id: 1,
     category: 'PC/LAPTOP',
@@ -10,7 +10,7 @@ export const mockProducts = [
     stock: 5,
     price: 2500,
     isFeatured: true,
-    imageUrl: 'https://placehold.co/600x400/161b22/8b949e?text=Laptop', // Placeholder
+    imageUrl: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&h=400&fit=crop',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const mockProducts = [
     stock: 12,
     price: 799,
     isFeatured: true,
-    imageUrl: 'https://placehold.co/600x400/161b22/8b949e?text=Tablet', // Placeholder
+    imageUrl: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&h=400&fit=crop',
   },
   {
     id: 3,
@@ -30,16 +30,97 @@ export const mockProducts = [
     stock: 30,
     price: 89,
     isFeatured: true,
-    imageUrl: 'https://placehold.co/600x400/161b22/8b949e?text=Mouse', // Placeholder
+    imageUrl: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop',
   },
-  // Otros Productos (No mostrados en la "Entrega 1")
-  { id: 4, category: 'PC/LAPTOP', title: 'Desktop Workstation Z', description: 'Potente PC de escritorio para profesionales.', stock: 8, price: 1800 },
-  { id: 5, category: 'TABLET', title: 'E-Reader Lumina', description: 'Lector de libros electrónicos con luz ajustable.', stock: 50, price: 199 },
-  { id: 6, category: 'ACCESORIO', title: 'Teclado Mecánico RGB', description: 'Switches táctiles y retroiluminación personalizable.', stock: 25, price: 149 },
-  { id: 7, category: 'ACCESORIO', title: 'Auriculares Crystal Sound', description: 'Audio de alta fidelidad con cancelación de ruido.', stock: 40, price: 120 },
-  { id: 8, category: 'PC/LAPTOP', title: 'Mini PC Office X', description: 'PC compacto ideal para el trabajo en casa.', stock: 15, price: 600 },
-  { id: 9, category: 'TABLET', title: 'Tablet Pro S12', description: 'Tablet de 12.4 pulgadas con lápiz óptico incluido.', stock: 7, price: 999 },
-  { id: 10, category: 'ACCESORIO', title: 'Webcam 4K Stream', description: 'Cámara web de ultra alta definición para streaming.', stock: 22, price: 95 },
-  { id: 11, category: 'PC/LAPTOP', title: 'Monitor Curvo UltraWide', description: 'Monitor de 34 pulgadas con alta tasa de refresco.', stock: 10, price: 750 },
-  { id: 12, category: 'ACCESORIO', title: 'Disco SSD Portátil 2TB', description: 'Almacenamiento ultra rápido en formato compacto.', stock: 18, price: 210 },
+  // Otros Productos (Total: 12 productos)
+  {
+    id: 4,
+    category: 'PC/LAPTOP',
+    title: 'Desktop Workstation Z',
+    description: 'Potente PC de escritorio para profesionales. Intel i9, 64GB RAM, SSD 2TB.',
+    stock: 8,
+    price: 1800,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&h=400&fit=crop',
+  },
+  {
+    id: 5,
+    category: 'TABLET',
+    title: 'E-Reader Lumina',
+    description: 'Lector de libros electrónicos con luz ajustable y pantalla táctil de 7 pulgadas.',
+    stock: 50,
+    price: 199,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&h=400&fit=crop',
+  },
+  {
+    id: 6,
+    category: 'ACCESORIO',
+    title: 'Teclado Mecánico RGB',
+    description: 'Switches táctiles y retroiluminación personalizable RGB. Ideal para gaming.',
+    stock: 25,
+    price: 149,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=400&fit=crop',
+  },
+  {
+    id: 7,
+    category: 'ACCESORIO',
+    title: 'Auriculares Crystal Sound',
+    description: 'Audio de alta fidelidad con cancelación de ruido activa. Perfecto para gaming y música.',
+    stock: 40,
+    price: 120,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop',
+  },
+  {
+    id: 8,
+    category: 'PC/LAPTOP',
+    title: 'Mini PC Office X',
+    description: 'PC compacto ideal para el trabajo en casa. Intel i5, 16GB RAM, SSD 512GB.',
+    stock: 15,
+    price: 600,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&h=400&fit=crop',
+  },
+  {
+    id: 9,
+    category: 'TABLET',
+    title: 'Tablet Pro S12',
+    description: 'Tablet profesional de 12 pulgadas con stylus incluido. Perfecta para diseño gráfico.',
+    stock: 18,
+    price: 899,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&h=400&fit=crop',
+  },
+  {
+    id: 10,
+    category: 'ACCESORIO',
+    title: 'Monitor UltraWide 34"',
+    description: 'Monitor curvo 4K de 34 pulgadas. Perfecto para productividad y gaming inmersivo.',
+    stock: 10,
+    price: 599,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&h=400&fit=crop',
+  },
+  {
+    id: 11,
+    category: 'ACCESORIO',
+    title: 'Webcam 4K Pro',
+    description: 'Cámara web 4K con micrófono incorporado y seguimiento automático. Ideal para streaming.',
+    stock: 22,
+    price: 179,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1587825147138-346c006fefc5?w=600&h=400&fit=crop',
+  },
+  {
+    id: 12,
+    category: 'PC/LAPTOP',
+    title: 'Laptop Ultrabook Elite',
+    description: 'Ultrabook premium de 14 pulgadas. Intel i7, 16GB RAM, pantalla OLED. Ligera y potente.',
+    stock: 7,
+    price: 1299,
+    isFeatured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop',
+  },
 ];
