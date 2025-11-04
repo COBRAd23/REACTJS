@@ -111,7 +111,7 @@ export const mockProducts = [
     stock: 22,
     price: 179,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1587825147138-346c006fefc5?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop',
   },
   {
     id: 12,

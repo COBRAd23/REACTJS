@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Notification from './components/Notification';
@@ -39,20 +40,23 @@ const App = () => {
   return (
     <Router>
       <CartProvider>
-        <div className="min-h-screen bg-gray-950">
+        <div className="min-h-screen bg-gray-950 flex flex-col">
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/cart"
-              element={
-                <Cart
-                  onConfirmPurchase={handleConfirmPurchase}
-                  onCancelPurchase={handleCancelPurchase}
-                />
-              }
-            />
-          </Routes>
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/cart"
+                element={
+                  <Cart
+                    onConfirmPurchase={handleConfirmPurchase}
+                    onCancelPurchase={handleCancelPurchase}
+                  />
+                }
+              />
+            </Routes>
+          </div>
+          <Footer />
           <Notification
             message={notification.message}
             isVisible={notification.isVisible}

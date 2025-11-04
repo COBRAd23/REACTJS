@@ -23,9 +23,9 @@ const CartWidget = () => {
   return (
     <div
       onClick={handleClick}
-      className="relative p-2 cursor-pointer transition duration-300 hover:scale-105 bg-gray-100 rounded-lg"
+      className="relative p-2 cursor-pointer transition duration-300 hover:scale-105"
     >
-      <ShoppingCartIcon className="w-6 h-6 text-gray-900" />
+      <ShoppingCartIcon className="w-6 h-6 text-white" />
       {itemCount > 0 && (
         <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-cyan-600 rounded-full min-w-[1.5rem] h-6">
           {itemCount}
