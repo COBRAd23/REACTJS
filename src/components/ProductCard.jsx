@@ -25,7 +25,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop';
+            e.target.src = 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop&q=80';
           }}
         />
       </div>

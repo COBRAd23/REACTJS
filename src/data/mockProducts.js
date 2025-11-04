@@ -10,7 +10,7 @@ export const mockProducts = [
     stock: 5,
     price: 2500,
     isFeatured: true,
-    imageUrl: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const mockProducts = [
     stock: 12,
     price: 799,
     isFeatured: true,
-    imageUrl: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const mockProducts = [
     stock: 30,
     price: 89,
     isFeatured: true,
-    imageUrl: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop&q=80',
   },
   // Otros Productos (Total: 12 productos)
   {
@@ -41,7 +41,7 @@ export const mockProducts = [
     stock: 8,
     price: 1800,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1587825147138-346c006fefc5?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const mockProducts = [
     stock: 50,
     price: 199,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const mockProducts = [
     stock: 25,
     price: 149,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ export const mockProducts = [
     stock: 40,
     price: 120,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ export const mockProducts = [
     stock: 15,
     price: 600,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 9,
@@ -91,7 +91,7 @@ export const mockProducts = [
     stock: 18,
     price: 899,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 10,
@@ -101,7 +101,7 @@ export const mockProducts = [
     stock: 10,
     price: 599,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 11,
@@ -111,7 +111,7 @@ export const mockProducts = [
     stock: 22,
     price: 179,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&h=400&fit=crop&q=80',
   },
   {
     id: 12,
@@ -121,6 +121,6 @@ export const mockProducts = [
     stock: 7,
     price: 1299,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&q=80',
   },
 ];
