@@ -10,7 +10,7 @@ export const mockProducts = [
     stock: 5,
     price: 2500,
     isFeatured: true,
-    imageUrl: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/una-computadora-portatil-encima-de-un-escritorio-H9JMjJlgZrw',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const mockProducts = [
     stock: 12,
     price: 799,
     isFeatured: true,
-    imageUrl: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/una-persona-sosteniendo-un-ipad-en-la-mano-yEvyuW_Xqu0',
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const mockProducts = [
     stock: 8,
     price: 1800,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1587825147138-346c006fefc5?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/a-computer-desk-with-a-keyboard-and-mouse-OrIjkpXyzRQ',
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const mockProducts = [
     stock: 50,
     price: 199,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/texto-PJ3rjIfD__k',
   },
   {
     id: 6,
@@ -101,17 +101,17 @@ export const mockProducts = [
     stock: 10,
     price: 599,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/las-piernas-de-una-persona-y-una-pantalla-de-television-obiUuwLSObs',
   },
   {
     id: 11,
     category: 'ACCESORIO',
     title: 'Webcam 4K Pro',
-    description: 'Cámara web 4K con micrófono incorporado y seguimiento automático. Ideal para streaming.',
+    description: 'Cámara web 4K con micrófono incorporado y seguimiento automático. Ideal para streaming. Logitech.',
     stock: 22,
     price: 179,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://unsplash.com/es/fotos/lente-de-camara-negra-y-plateada-nP4WPqYAhTQ',
   },
   {
     id: 12,
