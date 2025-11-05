@@ -10,8 +10,7 @@ export const mockProducts = [
     stock: 5,
     price: 2500,
     isFeatured: true,
-    // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UN PORTÁTIL
-    imageUrl: 'https://images.unsplash.com/photo-1517336714730-bc5567b19863?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1716681864177-bc810f62440d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3028',
   },
   {
     id: 2,
@@ -21,8 +20,7 @@ export const mockProducts = [
     stock: 12,
     price: 799,
     isFeatured: true,
-    // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UNA TABLET
-    imageUrl: 'https://images.unsplash.com/photo-1554679633-5c215392d4f2?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2584',
   },
   {
     id: 3,
@@ -32,7 +30,6 @@ export const mockProducts = [
     stock: 30,
     price: 89,
     isFeatured: true,
-    // URL ORIGINAL (YA FUNCIONABA)
     imageUrl: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop&q=80',
   },
   {
@@ -43,8 +40,7 @@ export const mockProducts = [
     stock: 8,
     price: 1800,
     isFeatured: false,
-    // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UN PC DE ESCRITORIO
-    imageUrl: 'https://images.unsplash.com/photo-1587840172403-f09d84f23b24?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1618339220157-daa2cd9ade56?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335',
   },
   {
     id: 5,
@@ -55,7 +51,7 @@ export const mockProducts = [
     price: 199,
     isFeatured: false,
     // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UN E-READER
-    imageUrl: 'https://images.unsplash.com/photo-1514782015383-a7c0677a28e9?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1610055106171-bc8d97f291cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
   },
   {
     id: 6,
@@ -65,19 +61,17 @@ export const mockProducts = [
     stock: 25,
     price: 149,
     isFeatured: false,
-    // URL ORIGINAL (YA FUNCIONABA)
-    imageUrl: 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1660491075646-2f15a7a5b500?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
   },
   {
      id: 7,
     category: 'ACCESORIO',
-    title: 'Auriculares Crystal Sound',
+    title: 'Auriculares Crystal Sound - SONY',
     description: 'Audio de alta fidelidad con cancelación de ruido activa. Perfecto para gaming y música.',
     stock: 40,
     price: 120,
     isFeatured: false,
-    // URL ORIGINAL (YA FUNCIONABA)
-    imageUrl: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
   },
   {
     id: 8,
@@ -87,8 +81,7 @@ export const mockProducts = [
     stock: 15,
     price: 600,
     isFeatured: false,
-    // URL ORIGINAL (YA FUNCIONABA)
-    imageUrl: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1528',
   },
   {
     id: 9,
@@ -98,8 +91,7 @@ export const mockProducts = [
     stock: 18,
     price: 899,
     isFeatured: false,
-    // URL ORIGINAL (YA FUNCIONABA)
-    imageUrl: 'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1601836211234-ca6cbde9a1cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2574',
   },
   {
     id: 10,
@@ -109,8 +101,7 @@ export const mockProducts = [
     stock: 10,
     price: 599,
     isFeatured: false,
-    // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UN MONITOR
-    imageUrl: 'https://images.unsplash.com/photo-1593640449553-d14c3e803c00?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1637946811752-4835a353847d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335',
   },
   {
     id: 11,
@@ -120,8 +111,7 @@ export const mockProducts = [
     stock: 22,
     price: 179,
     isFeatured: false,
-    // URL CORREGIDA - APUNTA DIRECTAMENTE A LA IMAGEN DE UNA WEBCAM
-    imageUrl: 'https://images.unsplash.com/photo-1616763428984-6d9b3d0a2f64?w=600&h=400&fit=crop&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1629429407756-446d66f5b24e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
   },
   {
     id: 12,
@@ -131,7 +121,6 @@ export const mockProducts = [
     stock: 7,
     price: 1299,
     isFeatured: false,
-    // URL ORIGINAL (YA FUNCIONABA)
     imageUrl: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&q=80',
   },
 ];
