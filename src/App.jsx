@@ -5,6 +5,9 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import NotFound from './pages/NotFound';
 import Notification from './components/Notification';
 
 const App = () => {
@@ -45,6 +48,8 @@ const App = () => {
           <div className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/category/:category" element={<ItemListContainer />} />
+              <Route path="/product/:id" element={<ItemDetailContainer />} />
               <Route
                 path="/cart"
                 element={
@@ -54,6 +59,7 @@ const App = () => {
                   />
                 }
               />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
           <Footer />

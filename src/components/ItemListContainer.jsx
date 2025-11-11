@@ -1,28 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import Cards from './Cards';
+import { mockProducts } from '../data/mockProducts';
+import { useCart } from '../context/CartContext';
 
-const ItemListContainer = ({ greeting }) => {
-  const welcomeMessage = greeting || "Bienvenido a TechNova, tu tienda de tecnología";
+// Helper to create a slug from category strings
+const slugify = (str) =>
+  String(str)
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+
+const fetchProducts = (categorySlug) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      if (!categorySlug) return resolve([...mockProducts]);
+      const filtered = mockProducts.filter((p) => slugify(p.category) === categorySlug);
+      resolve(filtered);
+    }, 500);
+  });
+};
+
+const ItemListContainer = () => {
+  const { category } = useParams();
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart();
+
+  useEffect(() => {
+    setLoading(true);
+    fetchProducts(category).then((res) => {
+      setProducts(res);
+      setLoading(false);
+    });
+  }, [category]);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
+  if (loading) return <div className="py-20 text-center text-white">Cargando productos...</div>;
 
   return (
-    <div className="text-center py-20 lg:py-32">
-      <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-        Descubre el Futuro
-      </h1>
-      <h2 className="text-3xl md:text-5xl font-extrabold text-cyan-400 mb-6 leading-snug">
-        {welcomeMessage}
-      </h2>
-      <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-        Explora nuestra selección de productos destacados, ahora con la opción de ordenamiento por preferencia.
-      </p>
-      <button
-        onClick={() => {
-          document.getElementById('productos-destacados')?.scrollIntoView({ behavior: 'smooth' });
-        }}
-        className="px-8 py-3 bg-cyan-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-cyan-500 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-      >
-        Ver Catálogo
-      </button>
-    </div>
+    <section className="py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Cards products={products} onAddToCart={handleAddToCart} sortOrder={'Relevancia'} onSortChange={() => {}} />
+      </div>
+    </section>
   );
 };
 

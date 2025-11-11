@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartWidget from './CartsWidget';
 
 // Icono del rayito (Zap) para el logo
@@ -11,7 +11,11 @@ const ZapIcon = (props) => (
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const navLinks = ['PCS & LAPTOPS', 'TABLETS', 'ACCESORIOS', 'OFERTAS FLASH'];
+  const rawLinks = ['TODOS', 'PC/LAPTOP', 'TABLET', 'ACCESORIO', 'OFERTAS FLASH'];
+  const navLinks = rawLinks.map((label) => {
+    const slug = label === 'TODOS' ? '' : String(label).toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    return { label, slug };
+  });
   const linkClass = 'text-gray-300 hover:text-cyan-400 transition-colors duration-200 cursor-pointer text-sm font-medium uppercase tracking-wider';
 
   return (
@@ -25,10 +29,10 @@ const NavBar = () => {
           <span className="text-xl font-bold text-white tracking-widest">TechNova Store</span>
         </div>
         <nav className="hidden md:flex space-x-6 lg:space-x-8">
-          {navLinks.map((link) => (
-            <a key={link} href="#" className={linkClass}>
-              {link}
-            </a>
+          {navLinks.map((ln) => (
+            <Link key={ln.label} to={ln.slug ? `/category/${ln.slug}` : '/'} className={linkClass}>
+              {ln.label}
+            </Link>
           ))}
         </nav>
         <div className="flex items-center space-x-4">

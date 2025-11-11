@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { mockProducts } from '../data/mockProducts';
 import { useCart } from '../context/CartContext';
 import Container from '../components/Container';
-import ItemListContainer from '../components/ItemListContainer';
+import Hero from '../components/Hero';
 import Cards from '../components/Cards';
 import Notification from '../components/Notification';
 
@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <main className="min-h-screen pt-12 pb-20">
       <Container>
-        <ItemListContainer greeting={welcomeMessage} />
+        <Hero greeting={welcomeMessage} />
         <Cards
           products={sortedProducts}
           sortOrder={sortOrder}

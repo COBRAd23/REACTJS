@@ -7,6 +7,14 @@ export const mockProducts = [
     category: 'PC/LAPTOP',
     title: 'LAPTOP Gaming Pro X',
     description: 'Potencia extrema con RTX 4080 y 32GB RAM. Perfecto para creadores y gamers.',
+    longDescription: 'La LAPTOP Gaming Pro X combina rendimiento de última generación con un chasis ligero y sistema de refrigeración avanzada. Ideal para sesiones largas de juego y renderizado profesional.',
+    colors: ['Negro', 'Gris Espacial', 'Rojo Racing'],
+    images: [
+      'https://images.unsplash.com/photo-1716681864177-bc810f62440d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3028',
+      'https://images.unsplash.com/photo-1555617117-08fda15f0d4f?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1587202372775-4f5f3a1f1b2b?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 5,
     price: 2500,
     isFeatured: true,
@@ -17,6 +25,14 @@ export const mockProducts = [
     category: 'TABLET',
     title: 'Tablet Ultra Lite T10',
     description: 'Diseño ultra delgado y pantalla OLED de 10 pulgadas. Ideal para movilidad y streaming.',
+    longDescription: 'Tablet Ultra Lite T10 ofrece una pantalla vibrante OLED y un rendimiento suficiente para edición ligera, lectura y multimedia. Batería para todo el día y peso pluma.',
+    colors: ['Plateado', 'Rosa Pálido', 'Negro'],
+    images: [
+      'https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2584',
+      'https://images.unsplash.com/photo-1587825140400-73d3a30d6f0b?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 12,
     price: 799,
     isFeatured: true,
@@ -27,6 +43,14 @@ export const mockProducts = [
     category: 'ACCESORIO',
     title: 'Mouse Inalámbrico Hyper X',
     description: 'Precisión de 16000 DPI, diseño ergonómico y batería de larga duración. Perfecto para e-sports.',
+    longDescription: 'El Mouse Inalámbrico Hyper X está pensado para jugadores exigentes: sensores precisos, switches duraderos y ergonomía óptima para largas sesiones.',
+    colors: ['Negro', 'Blanco'],
+    images: [
+      'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1545235610-3c296a1a8a3f?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1541534401786-9f7f6d3f0a1a?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 30,
     price: 89,
     isFeatured: true,
@@ -37,6 +61,14 @@ export const mockProducts = [
     category: 'PC/LAPTOP',
     title: 'Desktop Workstation Z',
     description: 'Potente PC de escritorio para profesionales. Intel i9, 64GB RAM, SSD 2TB.',
+    longDescription: 'Workstation Z está diseñada para cargas de trabajo intensivas: edición 3D, compilaciones y simulaciones. Expandible y con excelentes opciones de refrigeración.',
+    colors: ['Gris Metalizado'],
+    images: [
+      'https://images.unsplash.com/photo-1618339220157-daa2cd9ade56?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335',
+      'https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1585079543939-2a3a8a9f3c3a?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1585079543939-2a3a8a9f3c3a?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 8,
     price: 1800,
     isFeatured: false,
@@ -47,6 +79,14 @@ export const mockProducts = [
     category: 'TABLET',
     title: 'E-Reader Lumina',
     description: 'Lector de libros electrónicos con luz ajustable y pantalla táctil de 7 pulgadas.',
+    longDescription: 'Lumina es ideal para lectura prolongada: pantalla de alta contraste, controles sencillos y gran autonomía de batería.',
+    colors: ['Blanco', 'Gris'],
+    images: [
+      'https://images.unsplash.com/photo-1610055106171-bc8d97f291cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1523475496153-3d6ccf5e8f8f?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 50,
     price: 199,
     isFeatured: false,
@@ -58,6 +98,14 @@ export const mockProducts = [
     category: 'ACCESORIO',
     title: 'Teclado Mecánico RGB',
     description: 'Switches táctiles y retroiluminación personalizable RGB. Ideal para gaming.',
+    longDescription: 'Teclado mecánico con opciones de personalización profundas, keycaps de alta calidad y perfiles programables.',
+    colors: ['Negro'],
+    images: [
+      'https://images.unsplash.com/photo-1660491075646-2f15a7a5b500?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+      'https://images.unsplash.com/photo-1616611215568-0b6b3d5e8ae9?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1600',
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1600'
+    ],
     stock: 25,
     price: 149,
     isFeatured: false,
@@ -71,7 +119,7 @@ export const mockProducts = [
     stock: 40,
     price: 120,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+    images: ['https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670'],
   },
   {
     id: 8,
@@ -81,7 +129,7 @@ export const mockProducts = [
     stock: 15,
     price: 600,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1528',
+    images: ['https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1528'],
   },
   {
     id: 9,
@@ -91,7 +139,7 @@ export const mockProducts = [
     stock: 18,
     price: 899,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1601836211234-ca6cbde9a1cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2574',
+    images: ['https://images.unsplash.com/photo-1601836211234-ca6cbde9a1cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2574'],
   },
   {
     id: 10,
@@ -101,7 +149,7 @@ export const mockProducts = [
     stock: 10,
     price: 599,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1637946811752-4835a353847d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335',
+    images: ['https://images.unsplash.com/photo-1637946811752-4835a353847d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335'],
   },
   {
     id: 11,
@@ -111,7 +159,7 @@ export const mockProducts = [
     stock: 22,
     price: 179,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1629429407756-446d66f5b24e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+    images: ['https://images.unsplash.com/photo-1629429407756-446d66f5b24e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670'],
   },
   {
     id: 12,
@@ -121,6 +169,6 @@ export const mockProducts = [
     stock: 7,
     price: 1299,
     isFeatured: false,
-    imageUrl: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&q=80',
+    images: ['https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&q=80'],
   },
 ];
