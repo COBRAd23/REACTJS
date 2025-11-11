@@ -1,5 +1,6 @@
-import React from 'react';
+// React import not required with new JSX transform
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // Icono para el botón "Agregar al Carrito"
 const ShoppingBagIcon = (props) => (
@@ -11,32 +12,51 @@ const ShoppingBagIcon = (props) => (
 );
 
 const ProductCard = ({ product, onAddToCart }) => {
-  const { title, category, stock, price, imageUrl, images, description } = product;
-  const mainImage = images && images.length ? images[0] : imageUrl;
+  const { id, title, category, stock, price, imageUrl, images, description } = product || {};
+  const fallbackImage = 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop&q=80';
+  const mainImage = (images && images.length && images[0]) || imageUrl || fallbackImage;
 
   const handleAddToCart = () => {
-    onAddToCart();
+    if (typeof onAddToCart === 'function') onAddToCart();
   };
 
   return (
     <div className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl transition duration-500 ease-in-out transform hover:scale-[1.02] hover:shadow-cyan-500/30 w-full flex flex-col h-full">
-      <Link to={`/product/${product.id}`} className="relative h-48 bg-gray-800 flex items-center justify-center overflow-hidden block">
-        <img
-          src={mainImage}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop&q=80';
-          }}
-        />
-      </Link>
+      {id ? (
+        <Link to={`/product/${id}`} className="relative h-48 bg-gray-800 flex items-center justify-center overflow-hidden">
+          <img
+            src={mainImage}
+            alt={title || 'producto'}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop&q=80';
+            }}
+          />
+        </Link>
+      ) : (
+        <div className="relative h-48 bg-gray-800 flex items-center justify-center overflow-hidden">
+          <img
+            src={mainImage}
+            alt={title || 'producto'}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop&q=80';
+            }}
+          />
+        </div>
+      )}
       <div className="p-5 flex flex-col flex-grow">
         <p className="text-xs font-semibold text-cyan-400 mb-1 uppercase tracking-wider">
           {category}
         </p>
         <h3 className="text-xl font-bold text-white mb-2 line-clamp-2 min-h-[3.5rem]">
-          <Link to={`/product/${product.id}`} className="hover:text-cyan-300">{title}</Link>
+          {id ? (
+            <Link to={`/product/${id}`} className="hover:text-cyan-300">{title}</Link>
+          ) : (
+            <span className="hover:text-cyan-300">{title}</span>
+          )}
         </h3>
         <p className="text-sm text-gray-400 mb-4 h-12 overflow-hidden line-clamp-2 flex-grow">
           {description}
@@ -61,3 +81,22 @@ const ProductCard = ({ product, onAddToCart }) => {
 };
 
 export default ProductCard;
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    category: PropTypes.string,
+    stock: PropTypes.number,
+    price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    imageUrl: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.string),
+    description: PropTypes.string,
+  }),
+  onAddToCart: PropTypes.func,
+};
+
+ProductCard.defaultProps = {
+  product: {},
+  onAddToCart: undefined,
+};

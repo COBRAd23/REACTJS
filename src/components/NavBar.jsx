@@ -1,4 +1,4 @@
-import React from 'react';
+// React import not required with new JSX transform
 import { Link, useNavigate } from 'react-router-dom';
 import CartWidget from './CartsWidget';
 

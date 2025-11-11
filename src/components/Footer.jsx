@@ -1,4 +1,4 @@
-import React from 'react';
+// React import not required with new JSX transform
 
 const Footer = () => {
   return (

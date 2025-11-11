@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({ product, onAdd }) => {
+  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    if (!product) return;
+    const gallery = product.images && product.images.length ? product.images : [product.imageUrl];
+    setSelectedImage(gallery[0] || null);
+  }, [product]);
+
   if (!product) return <div className="py-20 text-center text-white">Producto no encontrado.</div>;
 
   const { title, description, longDescription, price, stock, imageUrl, images, category, colors } = product;
-  const navigate = useNavigate();
   const slugify = (str) =>
     String(str)
       .toLowerCase()
@@ -14,7 +23,6 @@ const ItemDetail = ({ product, onAdd }) => {
       .replace(/[^a-z0-9-]/g, '');
   const categorySlug = category ? slugify(category) : '';
   const gallery = images && images.length ? images : [imageUrl];
-  const [selectedImage, setSelectedImage] = useState(gallery[0]);
 
   return (
     <div className="max-w-4xl mx-auto bg-gray-900 rounded-xl p-6 mt-8">
@@ -61,3 +69,24 @@ const ItemDetail = ({ product, onAdd }) => {
 };
 
 export default ItemDetail;
+
+ItemDetail.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    description: PropTypes.string,
+    longDescription: PropTypes.string,
+    price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    stock: PropTypes.number,
+    imageUrl: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.string),
+    category: PropTypes.string,
+    colors: PropTypes.arrayOf(PropTypes.string),
+  }),
+  onAdd: PropTypes.func,
+};
+
+ItemDetail.defaultProps = {
+  product: null,
+  onAdd: undefined,
+};

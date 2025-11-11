@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { mockProducts } from '../data/mockProducts';
 import { useCart } from '../context/CartContext';
 import Container from '../components/Container';

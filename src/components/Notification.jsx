@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 // Icono de chequeo para la Notificación
 const CheckCircleIcon = (props) => (
@@ -65,3 +66,17 @@ const Notification = ({ message, isVisible, onClose, type = 'success' }) => {
 };
 
 export default Notification;
+
+Notification.propTypes = {
+  message: PropTypes.string,
+  isVisible: PropTypes.bool,
+  onClose: PropTypes.func,
+  type: PropTypes.string,
+};
+
+Notification.defaultProps = {
+  message: undefined,
+  isVisible: false,
+  onClose: () => {},
+  type: 'success',
+};

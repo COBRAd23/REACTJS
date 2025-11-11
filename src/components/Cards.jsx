@@ -1,5 +1,6 @@
-import React from 'react';
+// React import not required with new JSX transform
 import ProductCard from './ProductCard';
+import PropTypes from 'prop-types';
 
 // Icono de flecha hacia abajo
 const ChevronDown = (props) => (
@@ -48,3 +49,27 @@ const Cards = ({ products, sortOrder, onSortChange, onAddToCart }) => {
 };
 
 export default Cards;
+
+Cards.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      title: PropTypes.string,
+      category: PropTypes.string,
+      stock: PropTypes.number,
+      price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      imageUrl: PropTypes.string,
+      images: PropTypes.arrayOf(PropTypes.string),
+      description: PropTypes.string,
+    })
+  ).isRequired,
+  sortOrder: PropTypes.string,
+  onSortChange: PropTypes.func,
+  onAddToCart: PropTypes.func,
+};
+
+Cards.defaultProps = {
+  sortOrder: 'Relevancia',
+  onSortChange: () => {},
+  onAddToCart: () => {},
+};

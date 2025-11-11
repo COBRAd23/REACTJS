@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -25,3 +26,15 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 };
 
 export default ItemCount;
+
+ItemCount.propTypes = {
+  stock: PropTypes.number,
+  initial: PropTypes.number,
+  onAdd: PropTypes.func,
+};
+
+ItemCount.defaultProps = {
+  stock: 0,
+  initial: 1,
+  onAdd: () => {},
+};

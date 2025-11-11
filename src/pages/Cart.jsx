@@ -1,5 +1,6 @@
-import React from 'react';
+// React import not required with new JSX transform
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useCart } from '../context/CartContext';
 import Container from '../components/Container';
 
@@ -80,15 +81,21 @@ const Cart = ({ onConfirmPurchase, onCancelPurchase }) => {
               >
                 {/* Imagen */}
                 <div className="w-full md:w-32 h-32 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover rounded-lg opacity-30"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'https://placehold.co/600x400/161b22/8b949e?text=TechNova';
-                    }}
-                  />
+                  {(() => {
+                    const fallback = 'https://placehold.co/600x400/161b22/8b949e?text=TechNova';
+                    const mainImg = (item && item.images && item.images.length && item.images[0]) || item.imageUrl || fallback;
+                    return (
+                      <img
+                        src={mainImg}
+                        alt={item.title}
+                        className="w-full h-full object-cover rounded-lg"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = fallback;
+                        }}
+                      />
+                    );
+                  })()}
                 </div>
 
                 {/* Información del Producto */}
@@ -187,3 +194,13 @@ const Cart = ({ onConfirmPurchase, onCancelPurchase }) => {
 };
 
 export default Cart;
+
+Cart.propTypes = {
+  onConfirmPurchase: PropTypes.func,
+  onCancelPurchase: PropTypes.func,
+};
+
+Cart.defaultProps = {
+  onConfirmPurchase: undefined,
+  onCancelPurchase: undefined,
+};

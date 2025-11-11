@@ -1,4 +1,5 @@
-import React from 'react';
+// React import not required with new JSX transform
+import PropTypes from 'prop-types';
 
 const Hero = ({ greeting }) => {
   const welcomeMessage = greeting || "Bienvenido a TechNova, tu tienda de tecnología";
@@ -27,3 +28,11 @@ const Hero = ({ greeting }) => {
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  greeting: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  greeting: undefined,
+};
