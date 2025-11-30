@@ -119,7 +119,12 @@ export const mockProducts = [
     stock: 40,
     price: 120,
     isFeatured: false,
-    images: ['https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670'],
+    images: [
+      'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+      'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+      'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+      'https://images.unsplash.com/photo-1712369448819-2ca1105339cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670',
+    ],
   },
   {
     id: 8,
