@@ -4,7 +4,7 @@ import { useCart } from '../context/useCart';
 import { useNotification } from '../context/useNotification';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
-import Cards from '../components/Cards';
+import ItemList from '../components/ItemList';
 
 const Home = () => {
   const { addToCart } = useCart();
@@ -44,7 +44,7 @@ const Home = () => {
     <main className="min-h-screen pt-12 pb-20">
       <Container>
         <Hero greeting={welcomeMessage} />
-        <Cards
+        <ItemList
           products={sortedProducts}
           sortOrder={sortOrder}
           onSortChange={handleSortChange}

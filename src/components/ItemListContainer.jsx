@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Cards from './Cards';
+import ItemList from './ItemList';
 import { mockProducts } from '../data/mockProducts';
 import { useCart } from '../context/useCart';
 
@@ -36,7 +36,7 @@ const ItemListContainer = () => {
   }, [category]);
 
   const handleAddToCart = (product) => {
-    addToCart(product);
+    addToCart(product, 1);
   };
 
   if (loading) return <div className="py-20 text-center text-white">Cargando productos...</div>;
@@ -44,7 +44,7 @@ const ItemListContainer = () => {
   return (
     <section className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Cards products={products} onAddToCart={handleAddToCart} sortOrder={'Relevancia'} onSortChange={() => {}} />
+        <ItemList products={products} onAddToCart={handleAddToCart} sortOrder={'Relevancia'} onSortChange={() => {}} />
       </div>
     </section>
   );

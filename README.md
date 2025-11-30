@@ -20,6 +20,12 @@ Este es el proyecto inicial de e-commerce, construido con React y estilizado usa
 - Tailwind CSS
 - Context API para manejo de estado del carrito
 
+## 🧭 Estructura y Convenciones
+
+- **Context (global state)**: Todo lo relacionado al carrito (añadir, remover, limpiar, totales) está centralizado en `src/context/CartContext.jsx` y consumido a través del hook `src/context/useCart.js`.
+- **Notificaciones**: Las notificaciones globales se manejan desde `src/App.jsx` y se exponen con `src/context/useNotification.js`; el componente visual está en `src/components/Notification.jsx`.
+- **Contenedor vs Presentacional**: `ItemListContainer.jsx` solo se encarga de obtener datos (fetch simulado) y manejar la lógica; `ItemList.jsx` (presentacional) solo renderiza la UI usando `Cards.jsx`. `ItemDetailContainer.jsx` obtiene el producto y (`ItemDetail.jsx`) lo muestra.
+
 ## 📝 Características
 
 - ✅ Carrito de compras funcional
@@ -27,6 +33,29 @@ Este es el proyecto inicial de e-commerce, construido con React y estilizado usa
 - ✅ Ordenamiento de productos
 - ✅ Notificaciones de acciones
 - ✅ Diseño responsive
+
+## 🚀 Ejecutar el proyecto (desarrollo)
+
+1. Instala dependencias:
+
+```bash
+npm install
+```
+
+2. Ejecuta el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+3. Abre tu navegador en `http://localhost:5174/`.
+
+## 🔧 Notas de desarrollo
+
+- Para agregar/editar productos, edita `src/data/mockProducts.js`.
+- Para revisar el estado del carrito, inspecciona `src/context/CartContext.jsx` y usa el hook `useCart()` en componentes.
+- Los contenedores `ItemListContainer.jsx` y `ItemDetailContainer.jsx` usan Promises simuladas para fetch con delay para imitar latencia real.
+
 
 🚀 TechNova Store - E-commerce
 ENTREGA 2
