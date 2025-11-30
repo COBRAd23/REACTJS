@@ -1,17 +1,14 @@
 import { useState } from 'react';
 import { mockProducts } from '../data/mockProducts';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
+import { useNotification } from '../context/useNotification';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 import Cards from '../components/Cards';
-import Notification from '../components/Notification';
 
 const Home = () => {
   const { addToCart } = useCart();
-  const [notification, setNotification] = useState({
-    message: '',
-    isVisible: false,
-  });
+  const { showNotification } = useNotification();
   const [sortOrder, setSortOrder] = useState('Relevancia');
 
   // Todos los productos para mostrar (12 productos totales)
@@ -33,15 +30,9 @@ const Home = () => {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    setNotification({
-      message: `¡El producto "${product.title}" ha sido agregado al carrito!`,
-      isVisible: true,
-    });
+    showNotification(`¡El producto "${product.title}" ha sido agregado al carrito!`);
   };
 
-  const handleCloseNotification = () => {
-    setNotification({ ...notification, isVisible: false });
-  };
 
   const handleSortChange = (newSortOrder) => {
     setSortOrder(newSortOrder);
@@ -61,11 +52,7 @@ const Home = () => {
         />
       </Container>
 
-      <Notification
-        message={notification.message}
-        isVisible={notification.isVisible}
-        onClose={handleCloseNotification}
-      />
+      {/* Notifications now handled globally by App */}
     </main>
   );
 };

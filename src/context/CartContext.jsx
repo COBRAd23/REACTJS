@@ -1,33 +1,26 @@
-import { createContext, useContext, useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-
-const CartContext = createContext();
-
-export const useCart = () => {
-  const context = useContext(CartContext);
-  if (!context) {
-    throw new Error('useCart debe usarse dentro de CartProvider');
-  }
-  return context;
-};
+import CartContext from './cartCore';
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   // Agregar producto al carrito
-  const addToCart = (product) => {
+  const addToCart = (product, quantity = 1) => {
+    if (!product) return;
+    const qty = Number(quantity) || 1;
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
         // Si el producto ya está en el carrito, aumentar cantidad
         return prevItems.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + qty }
             : item
         );
       } else {
-        // Si es nuevo, agregarlo con cantidad 1
-        return [...prevItems, { ...product, quantity: 1 }];
+        // Si es nuevo, agregarlo con la cantidad indicada
+        return [...prevItems, { ...product, quantity: qty }];
       }
     });
   };

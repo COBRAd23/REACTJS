@@ -1,7 +1,7 @@
 // React import not required with new JSX transform
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 import Container from '../components/Container';
 
 // Iconos

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useNotification } from '../context/useNotification';
 import { mockProducts } from '../data/mockProducts';
 import ItemDetail from './ItemDetail';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 
 const fetchProductById = (id) =>
   new Promise((resolve) => {
@@ -18,6 +19,7 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  const { showNotification } = useNotification();
 
   useEffect(() => {
     setLoading(true);
@@ -29,8 +31,11 @@ const ItemDetailContainer = () => {
 
   const handleAdd = (quantity) => {
     if (!product) return;
-    // We add the product `quantity` times (or adapt cart to accept quantity)
-    for (let i = 0; i < quantity; i++) addToCart(product);
+    // Use the refactored addToCart that accepts quantity
+    addToCart(product, quantity);
+    if (typeof showNotification === 'function') {
+      showNotification(`¡${quantity} x ${product.title} agregado(s) al carrito!`);
+    }
     navigate('/cart');
   };
 

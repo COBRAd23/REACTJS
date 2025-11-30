@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Cards from './Cards';
 import { mockProducts } from '../data/mockProducts';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 
 // Helper to create a slug from category strings
 const slugify = (str) =>

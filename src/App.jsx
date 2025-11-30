@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import NotificationContext from './context/notificationCore';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -40,10 +41,15 @@ const App = () => {
     setNotification({ ...notification, isVisible: false });
   };
 
+  const showNotification = (message, type = 'success') => {
+    setNotification({ message, isVisible: true, type });
+  };
+
   return (
     <Router>
       <CartProvider>
-        <div className="min-h-screen bg-gray-950 flex flex-col">
+        <NotificationContext.Provider value={{ showNotification }}>
+          <div className="min-h-screen bg-gray-950 flex flex-col">
           <NavBar />
           <div className="flex-grow">
             <Routes>
@@ -69,7 +75,8 @@ const App = () => {
             onClose={handleCloseNotification}
             type={notification.type}
           />
-        </div>
+          </div>
+        </NotificationContext.Provider>
       </CartProvider>
     </Router>
   );
