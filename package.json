@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest --environment jsdom",
+    "test": "vitest --environment jsdom --run",
+    "test:watch": "vitest --environment jsdom",
     "test:coverage": "vitest --coverage --environment jsdom",
     "lint": "eslint .",
     "preview": "vite preview",
